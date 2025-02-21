@@ -26,7 +26,7 @@ interface ProductDetailsProps {
 }
 
 const ProductDetails = ({ product }: ProductDetailsProps) => {
-    const { toggleCart } = useContext(CartContext);
+    const { toggleCart, addProduct } = useContext(CartContext);
     const [quantity, setQuantity] = useState<number>(1);
     const handleDecreaseQuatity = () => {
         setQuantity(prev => {
@@ -40,6 +40,10 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
         setQuantity(prev => prev + 1);
     };
     const handleAddToCart = () => {
+        addProduct({
+            ...product,
+            quantity,
+        });
         toggleCart();
     };
     return ( 
@@ -113,7 +117,9 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
                 </ScrollArea>
            </div>
 
-            <Button className="rounded-full w-full mt-6" onClick={handleAddToCart}>Adicionar à sacola </Button>
+            <Button className="rounded-full w-full mt-6" onClick={handleAddToCart}>
+                Adicionar à sacola 
+            </Button>
         </div>
         <CartSheet />      
         </>
