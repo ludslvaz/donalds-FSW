@@ -55,6 +55,6 @@ const RestaurantPage = async ({params}: RestaurantPageProps) => {
             </div>
     </div>
     );
-}
+};
 
 export default RestaurantPage;
