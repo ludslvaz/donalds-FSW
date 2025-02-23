@@ -60,7 +60,7 @@ const OrderList = ({ orders }: OrderListProps) => {
                 <Card key={order.id}>
                     <CardContent className="p-5 space-y-4">
                         <div className={`w-fit text-white rounded-full px-2 py-1 text-xs font-semibold
-                            ${order.status === OrderStatus.FINISHED ? "bg-[#5DC05B] text-white" : "bg-[#FFFBEB] text-[#FFB100]"}
+                            ${order.status === OrderStatus.FINISHED ? "bg-[#5DC05B] text-white" : "bg-[#eedea2] text-[#ff7300]"}
                             `}>
                             {getStatusLabel(order.status)}
                         </div>
