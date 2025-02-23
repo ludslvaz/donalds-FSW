@@ -87,7 +87,7 @@ const RestaurantCategories = ({restaurant}: RestaurantCategoriesProps) => {
                             </span>
                         </p>
                     </div>
-                    <Button onClick={toggleCart}>Ver sacola</Button>
+                    <Button onClick={toggleCart} variant="destructive">Ver sacola</Button>
                     <CartSheet/>
                 </div>
             )}

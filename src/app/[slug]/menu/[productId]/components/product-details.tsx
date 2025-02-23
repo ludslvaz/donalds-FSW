@@ -49,7 +49,7 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
     return ( 
         <>
         <div className="relative z-50 mt-[-1.5rem] rounded-t-3xl py-5 px-5 flex-auto flex flex-col overflow-hidden">
-           <div className="flex-auto overflow-hidden">
+           <div className="flex-auto overflow-hidden pb-12">
                 {/* RESTAURANTE */}
                 <div className="flex items-center gap-1.5">
                     <Image 
